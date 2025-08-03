@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ShopEasy</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="auth-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout-container">
+            <h1>Checkout</h1>
+            <div class="checkout-grid">
+                <div class="shipping-form">
+                    <h2>Shipping Information</h2>
+                    <form id="shipping-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" placeholder="Address" required>
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="Zip Code" required>
+                        <input type="email" placeholder="Email" required>
+                    </form>
+                </div>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="checkout-items">
+                        <!-- JS will load items here -->
+                    </div>
+                    <div class="order-totals">
+                        <p>Subtotal: $<span id="checkout-subtotal">0.00</span></p>
+                        <p>Shipping: $<span id="shipping">5.00</span></p>
+                        <p>Tax: $<span id="checkout-tax">0.00</span></p>
+                        <p class="total">Total: $<span id="checkout-total">0.00</span></p>
+                    </div>
+                    <button class="btn" id="place-order-btn">Place Order</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
